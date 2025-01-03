@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.gradiant {
+  background: linear-gradient(95deg, #059DFF 15%, #6549D5 45%, #E33FA1 75%, #FB5343 100%) 95%/200% 100%;
+}
+
+.bg-text {
+  background: linear-gradient(95deg, #059DFF 15%, #6549D5 45%, #E33FA1 75%, #FB5343 100%) 95%/200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animate-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #4A90E2; /* The caret */
+  width: 0;
+  animation: typing 3.5s steps(30) 1s forwards, blinkCaret 0.75s step-end infinite;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .animate-typing {
+    width: auto !important;  /* Ensure the text can be fully visible */
+    animation: none;  /* Disable animation on small devices */
+  }
+}
+/* Add these classes directly or extend Tailwind */
+.hover-effect {
+  transition: all 0.3s ease-in-out;
+}
+.hover-effect:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #3b82f6, #10b981);
+  color: white;
+}
+.bgcover {
+  background-image: linear-gradient(to right, #3b82f6, #10b981); /* Blue to Green gradient */
+  border: 4px solid transparent; /* 4px solid transparent border */
+}
+
+
